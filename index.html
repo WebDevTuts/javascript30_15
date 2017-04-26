@@ -44,6 +44,11 @@
     this.reset();
   }
 
+  function toggleDone(e) {
+    if ( !e.target.matches('input') ) return; // skip this unless it's an input
+    console.log(e.target);
+  }
+
   function populateList(plates = [], platesList) {
     platesList.innerHTML = plates.map((plate, i) => {
       return `
